@@ -1,0 +1,313 @@
+{
+	"info": {
+		"_postman_id": "b75b0cde-e3e2-436a-8d45-15d2ac98a103",
+		"name": "VCS-DealerApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6295469"
+	},
+	"item": [
+		{
+			"name": "Get App Versions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "token",
+						"value": "TMSI_VCSDAPP_1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"appCode\":6\n}\n"
+				},
+				"url": {
+					"raw": "https://mdealerapp.tmsitrimble.in/VCSDealerApp/post/json/app/getAppVersion",
+					"protocol": "https",
+					"host": [
+						"mdealerapp",
+						"tmsitrimble",
+						"in"
+					],
+					"path": [
+						"VCSDealerApp",
+						"post",
+						"json",
+						"app",
+						"getAppVersion"
+					],
+					"query": [
+						{
+							"key": "Token",
+							"value": "ssss",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Stack Details",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "TMSI_VCSDAPP_1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"appCode\":6\n}\n"
+				},
+				"url": {
+					"raw": "{{vcsd_app_url}}/post/json/app/getStacksDetails",
+					"host": [
+						"{{vcsd_app_url}}"
+					],
+					"path": [
+						"post",
+						"json",
+						"app",
+						"getStacksDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Authentication",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"type": "text",
+						"value": "TMSI_VCSDAPP_1"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userName\":\"t184\",\n  \"password\":\"password123\",\n  \"appCode\":6,\n  \"fcmId\":\"dVUrwmskano:APA91bEoC5uR9gNiTVF2n4GerzRmbBvenPqdLkxgams5H0CoZ3YAOvBaZbHH7YgswmRbN9_vDiR6zgQFzT1rYnwxj-5Y9EGh_SBjTV0GP3puo8OckdHpqUE62Xa5xjYUekRWUgo3_QQ8\",\n  \"deviceUniqueId\":\"xhxxh123\",\n  \"deviceManufacturer\":\"Xiomi\",\n  \"deviceModel\":\"ABC123\",\n  \"deviceOS\":\"Andriod\",\n  \"deviceOSVerison\":\"7\"\n}"
+				},
+				"url": {
+					"raw": "https://mdealerapp.tmsitrimble.in/VCSDealerApp/post/json/user/authenticateUser",
+					"protocol": "https",
+					"host": [
+						"mdealerapp",
+						"tmsitrimble",
+						"in"
+					],
+					"path": [
+						"VCSDealerApp",
+						"post",
+						"json",
+						"user",
+						"authenticateUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Consignment By Criteria",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "token",
+						"type": "text",
+						"value": "TMSI_VCSDAPP_1"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userId\":54,\n  \"consignmentId\":\"\"\n}"
+				},
+				"url": {
+					"raw": "{{vcsd_app_url}}/post/json/consignment/getConsingmentsByCriteria",
+					"host": [
+						"{{vcsd_app_url}}"
+					],
+					"path": [
+						"post",
+						"json",
+						"consignment",
+						"getConsingmentsByCriteria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Consignment Trail",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "TMSI_VCSDAPP_1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"consignmentId\":8327303\n}"
+				},
+				"url": {
+					"raw": "{{vcsd_app_url}}/post/json/consignment/getConsingmentTrail",
+					"host": [
+						"{{vcsd_app_url}}"
+					],
+					"path": [
+						"post",
+						"json",
+						"consignment",
+						"getConsingmentTrail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Notification List",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "TMSI_VCSDAPP_1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"appCode\":6,\n  \"userId\":128,\n  \"loginHistoryId\":27\n}"
+				},
+				"url": {
+					"raw": "{{vcsd_app_url}}/post/json/consignment/getNotificationList",
+					"host": [
+						"{{vcsd_app_url}}"
+					],
+					"path": [
+						"post",
+						"json",
+						"consignment",
+						"getNotificationList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Firebase Send API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "key=AAAAUvSX5TA:APA91bEfga547EZXisXNyobmkPUiS_GibpFaayhQbvFGHs06oYy3W3AFqEjvLH8R45Kq9KAH1xmIaVoF7zyIBGaTtgqPyUz8tvyX5-HVFJwyqnZHmlOg8-DmAGY0QRvWGdBU9oXB9k46",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"notification\":\n  {\n    \"title\": \"Test notification 15\",\n    \"body\": \"This is test notification\"\n  },\n  \n  \"data\":{\n    \"consignmentId\": 8325343,\n    \"title\": \"Test notification 15\",\n    \"body\": \"This is test notification\"\n  },\n  \"to\" : \"e_SQ0yFumm8:APA91bG0aKxvCBAQI1tuh6lb68eCB-qq0N0-kew6yP-ZHRVzj6UTj533m73bgN1LCNULTuuhVy9ObwTliX_zhXZVz2OkZfvR1ElqmZ6VZ7-MXVniZJFR8XveIn1yXXYN5q2-clyXJENC\"\n}"
+				},
+				"url": {
+					"raw": "https://fcm.googleapis.com/fcm/send",
+					"protocol": "https",
+					"host": [
+						"fcm",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"fcm",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "TMSI_VCSDAPP_1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"appCode\":6,\n  \"userId\":54,\n  \"loginHistoryId\":-1\n}"
+				},
+				"url": {
+					"raw": "{{vcsd_app_url}}/post/json/user/logout",
+					"host": [
+						"{{vcsd_app_url}}"
+					],
+					"path": [
+						"post",
+						"json",
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "vcsd_app_url",
+			"value": "https://mdealerapp.tmsitrimble.in/VCSDealerApp"
+		}
+	]
+}
